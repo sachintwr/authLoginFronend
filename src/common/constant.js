@@ -1,7 +1,7 @@
 //import { Dimensions } from 'react-native';
 /*need to chage as per development or prodcution*/
 
-const serverURL = "http://localhost:3001/"
+const serverURL = "https://login-auth-backend-u32w.vercel.app/"
 const apiURL = serverURL + "api/";
 
 const isAWS = false;
