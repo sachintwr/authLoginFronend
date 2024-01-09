@@ -1,0 +1,66 @@
+
+## Components
+
+### Login
+
+- **Location:** `src/routes/Login.jsx`
+- **Description:** The login component allows users to enter their mobile number and password to log in.
+
+### Signup
+
+- **Location:** `src/routes/Signup.jsx`
+- **Description:** The signup component enables users to create a new account by providing their name, mobile number, email, password, and account type.
+
+### Dashboard
+
+- **Location:** `src/routes/Dashboard.jsx`
+- **Description:** The dashboard component displays user-specific information after successful login.
+
+... (document other components)
+
+## Custom Hooks
+
+### useFetch
+
+- **Location:** `src/hooks/useFetch.js`
+- **Description:** A custom hook for handling data fetching. It provides loading, data, and error states.
+
+... (document other custom hooks)
+
+## API Integration
+
+- **Location:** `src/api/api.js`
+- **Description:** The API integration module contains functions for making requests to the backend API. It uses the Fetch API for asynchronous communication.
+
+## Routing
+
+- **Location:** `src/routes/`
+- **Description:** React Router is used for navigation between different pages in the app. Routes are defined in the `Routes` component in `App.js`.
+
+## State Management
+
+- **Location:** `src/common/UserContext.js`
+- **Description:** The application uses React Context API to manage user-related data globally.
+
+## Styling
+
+- **Location:** Various CSS files in the `src` directory.
+- **Description:** Styles are applied using CSS modules for component-specific styling.
+
+## Error Handling
+
+- **Location:** `src/common/ErrorBoundary.js`
+- **Description:** An error boundary component is implemented to catch errors in the components and display a friendly error message.
+
+## Deployment
+
+- **Frontend:** The React frontend can be deployed to platforms like Vercel, Netlify, or GitHub Pages.
+- **Backend:** The Node.js backend can be hosted on platforms like Heroku.
+
+## Author
+
+Your Name
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
