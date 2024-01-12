@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { loginApi } from "../api/api";
+import { loginApi } from "../../api/api";
 import { useNavigate, Link } from "react-router-dom";
-import constant from "../common/constant";
-import { UserContextData } from "../common/UserContext";
-
+import constant from "../../common/constant";
+import { UserContextData } from "../../common/UserContext";
+import './login.css'
 function Login() {
     const history = useNavigate();
     const { updateStoreData } = useContext(UserContextData);

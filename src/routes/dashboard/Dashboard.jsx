@@ -1,8 +1,9 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { UserContextData } from "../common/UserContext";
-import constant from "../common/constant";
-import { dashboardApi } from "../api/api";
+import { UserContextData } from "../../common/UserContext";
+import constant from "../../common/constant";
+import { dashboardApi } from "../../api/api";
+import './dashboard.css';
 function Dashboard() {
     const { storeData, updateStoreData } = useContext(UserContextData);
     const [suc, setSuc] = useState()

@@ -1,10 +1,10 @@
 import './App.css';
-import Login from './routes/login';
-import Signup from './routes/signup';
+import Login from './routes/login/login';
+import Signup from './routes/signup/signup';
 import Home from './routes/home';
 import Contact from './routes/Contact';
 import About from './routes/About';
-import Dashboard from './routes/Dashboard';
+import Dashboard from './routes/dashboard/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserContextProvider } from './common/UserContext';
 

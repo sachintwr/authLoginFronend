@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import { signupApi } from "../api/api";
+import { signupApi } from "../../api/api";
 import { useNavigate, Link } from "react-router-dom";
-import constant from "../common/constant";
-import { UserContextData } from "../common/UserContext";
+import constant from "../../common/constant";
+import { UserContextData } from "../../common/UserContext";
+import './signup.css'
 
 function Signup() {
     const [loader, setLoader] = useState(false);
