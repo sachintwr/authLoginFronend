@@ -1,9 +1,12 @@
+// Login.js
+
 import React, { useContext, useState } from "react";
 import { loginApi } from "../../api/api";
 import { useNavigate, Link } from "react-router-dom";
 import constant from "../../common/constant";
 import { UserContextData } from "../../common/UserContext";
-import './login.css'
+import './login.css';
+
 function Login() {
     const history = useNavigate();
     const { updateStoreData } = useContext(UserContextData);
@@ -33,7 +36,7 @@ function Login() {
                     console.log('redirected to dashboard from login page')
                     history('/dashboard', { state: { id: loginResponse.user.name } })
                 } else {
-                    console.log('redirected to home fron login page')
+                    console.log('redirected to home from login page')
                     history('/home', { state: { id: loginResponse.user.name } })
                 }
                 SetLoader(false);
@@ -51,32 +54,38 @@ function Login() {
     };
 
     return (
-        <div className="login">
-            <h1>Login</h1>
+        <div className="login container">
+            <h1 className="text-center">Login</h1>
 
             <form>
-                <input
-                    type="text"
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
-                    placeholder="Mobile"
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
-                <button type="button" onClick={handleSubmit}>
-                    Login
+                <div className="form-group">
+                    <input
+                        type="text"
+                        value={mobile}
+                        onChange={(e) => setMobile(e.target.value)}
+                        className="form-control"
+                        placeholder="Mobile"
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="form-control"
+                        placeholder="Password"
+                    />
+                </div>
+                {loginError && <p className="text-center text-danger">{loginError}</p>}
+                <button type="button" onClick={handleSubmit} className="btn btn-success btn-block">
+                    {loader ? 'Logging in...' : 'Login'}
                 </button>
             </form>
 
-            <br />
-            <p>OR</p>
-            <br />
-            <Link to="/signup">Signup Page</Link>
+            <div className="mt-3 text-center">
+                <p>OR</p>
+                <Link to="/signup" className="text-primary">Signup Page</Link>
+            </div>
         </div>
     );
 }

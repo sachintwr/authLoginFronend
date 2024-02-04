@@ -29,8 +29,6 @@ input {
 }
 
 button {
-    background-color: #4caf50;
-    color: #fff;
     padding: 12px;
     font-size: 16px;
     border: none;
@@ -47,11 +45,12 @@ p {
     color: #ff0000;
 }
 
-Link {
+/* Updated Bootstrap class for Link */
+a {
     text-decoration: none;
     color: #007bff;
 }
 
-Link:hover {
+a:hover {
     text-decoration: underline;
 }
